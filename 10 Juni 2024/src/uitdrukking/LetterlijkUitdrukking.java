@@ -20,7 +20,7 @@ public class LetterlijkUitdrukking extends Uitdrukking {
 	 * @throws IllegalArgumentException | v == null
 	 * @post | result == 0
 	 */
-	public int aantalVoorkomens(String v) {
+	public int aantalVoorkomens(VariabeleUitdrukking v) {
 		if(v == null)
 			throw new IllegalArgumentException();
 		return 0;

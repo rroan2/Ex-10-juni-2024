@@ -23,12 +23,12 @@ public class VariabeleUitdrukking extends Uitdrukking {
 	
 	/**
 	 * @throws IllegalArgumentException | v == null
-	 * @post | result == (v.equals(getVariabele()) ? 1 : 0)
+	 * @post | result == (v.equals(this) ? 1 : 0)
 	 */
-	public int aantalVoorkomens(String v) {
+	public int aantalVoorkomens(VariabeleUitdrukking v) {
 		if(v == null)
 			throw new IllegalArgumentException();
-		return v.equals(this.v) ? 1 : 0;
+		return v.equals(this) ? 1 : 0;
 	}
 
 	

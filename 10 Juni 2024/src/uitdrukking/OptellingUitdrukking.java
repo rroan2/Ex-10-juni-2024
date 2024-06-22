@@ -45,7 +45,7 @@ public class OptellingUitdrukking extends Uitdrukking{
 	 * @post | result >= 0
 	 * @post | result == getLinks().aantalVoorkomens(v) + getRechts().aantalVoorkomens(v)
 	 */
-	public int aantalVoorkomens(String v) {
+	public int aantalVoorkomens(VariabeleUitdrukking v) {
 		return links.aantalVoorkomens(v) + rechts.aantalVoorkomens(v);
 	}
 	
