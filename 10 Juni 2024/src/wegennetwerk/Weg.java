@@ -1,7 +1,9 @@
 package wegennetwerk;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import logicalcollections.LogicalSet;
@@ -81,10 +83,10 @@ public class Weg {
 		
 	}
 	
-	public Stream tweedeOrdeWegen() {
+	public List<Weg> tweedeOrdeWegen() {
 		return eindkruispunt.getVertrekwegen().stream()
 				.filter(w -> w.eindkruispunt != null)
 				.map(w -> w.eindkruispunt)
-				.flatMap(k -> k.vertrekwegen.stream());
+				.flatMap(k -> k.vertrekwegen.stream()).collect(Collectors.toList());
 	}
 }
