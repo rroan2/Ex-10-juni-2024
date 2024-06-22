@@ -4,6 +4,10 @@ import java.util.HashSet;
 import java.util.Set;
 import logicalcollections.LogicalSet;
 
+/**
+ * @invar | getVertrekwegen() != null
+ * @invar | getAankomstwegen() != null
+ */
 public class Kruispunt {
 
 	/**
@@ -38,6 +42,8 @@ public class Kruispunt {
 	/**
 	 * @post | getVertrekwegen().stream().allMatch(w -> w == null)
 	 * @post | getAankomstwegen().stream().allMatch(w -> w == null)
+	 * @post | getAankomstwegen() != null
+	 * @post | getVertrekwegen() != null
 	 */
 	public Kruispunt() {}
 	
